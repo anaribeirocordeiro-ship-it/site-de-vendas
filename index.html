@@ -1,72 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loja de Marcas Esportivas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>SportX | As Melhores Marcas Esportivas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
     <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <h1>SportShop</h1>
-        </div>
-        <nav>
+    <header class="header">
+        <div class="logo">Sport<span>X</span></div>
+        <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Roupas</a></li>
-                <li><a href="#">Calçados</a></li>
-                <li><a href="#">Acessórios</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <div class="cart">🛒</div>
     </header>
 
-    <!-- Banner Principal -->
+    <!-- Banner -->
     <section class="banner">
-        <img src="https://via.placeholder.com/1200x400" alt="Promoção Esportiva">
-        <div class="banner-texto">
-            <h2>Descontos Imperdíveis nas Melhores Marcas!</h2>
-            <p>Encontre produtos de qualidade para o seu treino com até 50% OFF.</p>
-            <a href="#" class="btn-banner">Ver Promoções</a>
+        <div class="banner-content">
+            <h1>Vista-se para a vitória</h1>
+            <p>As maiores marcas esportivas em um só lugar.</p>
+            <a href="#produtos" class="btn">Compre Agora</a>
         </div>
     </section>
 
-    <!-- Seção de Produtos -->
-    <section class="produtos">
-        <h2>Novidades das Marcas</h2>
-        <div class="lista-produtos">
-            <!-- Produto 1 -->
-            <div class="produto">
-                <img src="https://via.placeholder.com/200" alt="Produto Nike">
-                <h3>Nike Air Zoom</h3>
-                <p>R$ 599,99</p>
-                <button>Adicionar ao Carrinho</button>
+    <!-- Produtos -->
+    <section id="produtos" class="produtos">
+        <h2>Nossos Destaques</h2>
+        <div class="grid">
+            <div class="produto-card">
+                <img src="img/nike.jpg" alt="Tênis Nike">
+                <h3>Tênis Nike Air Zoom</h3>
+                <p>R$ 499,90</p>
+                <a href="produto.html" class="btn">Ver Detalhes</a>
             </div>
-            <!-- Produto 2 -->
-            <div class="produto">
-                <img src="https://via.placeholder.com/200" alt="Produto Adidas">
-                <h3>Adidas Ultraboost</h3>
-                <p>R$ 799,99</p>
-                <button>Adicionar ao Carrinho</button>
+
+            <div class="produto-card">
+                <img src="img/adidas.jpg" alt="Camiseta Adidas">
+                <h3>Camiseta Adidas Climalite</h3>
+                <p>R$ 149,90</p>
+                <a href="produto.html" class="btn">Ver Detalhes</a>
             </div>
-            <!-- Produto 3 -->
-            <div class="produto">
-                <img src="https://via.placeholder.com/200" alt="Produto Puma">
-                <h3>Puma Future Rider</h3>
-                <p>R$ 349,99</p>
-                <button>Adicionar ao Carrinho</button>
+
+            <div class="produto-card">
+                <img src="img/puma.jpg" alt="Agasalho Puma">
+                <h3>Agasalho Puma Sport</h3>
+                <p>R$ 299,90</p>
+                <a href="produto.html" class="btn">Ver Detalhes</a>
             </div>
         </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+        <h2>Sobre a SportX</h2>
+        <p>A SportX nasceu para reunir as melhores marcas esportivas do mundo em um só lugar. 
+        Nosso compromisso é oferecer produtos de qualidade, conforto e desempenho para atletas e entusiastas do esporte.</p>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <h2>Entre em Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu Email" required>
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
     </section>
 
     <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 SportShop. Todos os direitos reservados.</p>
+    <footer class="footer">
+        <p>© 2025 SportX - Todos os direitos reservados.</p>
         <div class="social">
-            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+            <a href="#">Instagram</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">X (Twitter)</a>
         </div>
     </footer>
 </body>

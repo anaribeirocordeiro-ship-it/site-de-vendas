@@ -1,121 +1,208 @@
-/* Reset de estilos padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    color: #222;
+    background-color: #fff;
 }
 
 /* Cabeçalho */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 10%;
+    background: #000;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-header .logo h1 {
+.logo {
     font-size: 28px;
-    padding-left: 20px;
+    font-weight: bold;
 }
 
-header nav ul {
+.logo span {
+    color: #ff3c00;
+}
+
+.navbar ul {
     list-style: none;
     display: flex;
-    margin-right: 20px;
+    gap: 25px;
 }
 
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: #fff;
+.navbar a {
     text-decoration: none;
-    font-size: 16px;
+    color: #fff;
+    transition: 0.3s;
 }
 
-/* Banner Principal */
+.navbar a:hover {
+    color: #ff3c00;
+}
+
+.cart {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Banner */
 .banner {
-    position: relative;
-    margin-top: 20px;
-}
-
-.banner img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-.banner-texto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background: url('../img/banner.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
     text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.banner .btn {
+    margin-top: 15px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background: #ff3c00;
     color: #fff;
-}
-
-.banner-texto h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.banner-texto p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.btn-banner {
-    background-color: #ff5722;
-    color: #fff;
-    padding: 12px 30px;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
-.btn-banner:hover {
-    background-color: #e64a19;
+.btn:hover {
+    background: #e03600;
 }
 
-/* Seção de Produtos */
+/* Produtos */
 .produtos {
-    padding: 40px 20px;
+    padding: 80px 10%;
     text-align: center;
 }
 
 .produtos h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-.lista-produtos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
 }
 
-.produto {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
+.produto-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.produto-card h3 {
+    margin: 15px 0 5px;
+}
+
+.produto-card p {
+    font-weight: bold;
+    color: #ff3c00;
+}
+
+/* Seção Sobre */
+.sobre, .contato {
+    padding: 60px 10%;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
 }
 
-.produto:hover {
-    transform: translateY
+/* Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Rodapé */
+.footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer a {
+    color: #ff3c00;
+    text-decoration: none;
+}
+
+/* Página de Produto */
+.produto-detalhe {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 10%;
+}
+
+.produto-detalhe img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.detalhes {
+    flex: 1;
+}
+
+.preco {
+    color: #ff3c00;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .produto-detalhe {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .produto-detalhe img {
+        width: 100%;
+    }
+}
+
+}
