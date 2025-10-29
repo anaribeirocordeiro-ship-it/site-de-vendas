@@ -1,89 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SportX | As Melhores Marcas Esportivas</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportMaster - As Melhores Marcas Esportivas</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="header">
-        <div class="logo">Sport<span>X</span></div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="cart">🛒</div>
-    </header>
 
-    <!-- Banner -->
-    <section class="banner">
-        <div class="banner-content">
-            <h1>Vista-se para a vitória</h1>
-            <p>As maiores marcas esportivas em um só lugar.</p>
-            <a href="#produtos" class="btn">Compre Agora</a>
-        </div>
-    </section>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">🏆 SportMaster</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="cart">🛒</div>
+  </header>
 
-    <!-- Produtos -->
-    <section id="produtos" class="produtos">
-        <h2>Nossos Destaques</h2>
-        <div class="grid">
-            <div class="produto-card">
-                <img src="img/nike.jpg" alt="Tênis Nike">
-                <h3>Tênis Nike Air Zoom</h3>
-                <p>R$ 499,90</p>
-                <a href="produto.html" class="btn">Ver Detalhes</a>
-            </div>
+  <!-- Banner -->
+  <section class="banner">
+    <img src="img/banner.jpg" alt="Promoção esportiva">
+    <div class="banner-text">
+      <h1>Seu Estilo. Seu Desempenho.</h1>
+      <p>As melhores marcas esportivas estão aqui!</p>
+      <a href="produtos.html" class="btn">Compre Agora</a>
+    </div>
+  </section>
 
-            <div class="produto-card">
-                <img src="img/adidas.jpg" alt="Camiseta Adidas">
-                <h3>Camiseta Adidas Climalite</h3>
-                <p>R$ 149,90</p>
-                <a href="produto.html" class="btn">Ver Detalhes</a>
-            </div>
+  <!-- Produtos em destaque -->
+  <section class="produtos-destaque">
+    <h2>Marcas em Destaque</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="img/nike.jpg" alt="Nike">
+        <h3>Nike</h3>
+        <p>Performance e estilo em cada passo.</p>
+        <a href="produto.html" class="btn-sec">Ver mais</a>
+      </div>
+      <div class="card">
+        <img src="img/adidas.jpg" alt="Adidas">
+        <h3>Adidas</h3>
+        <p>Conforto e tecnologia para campeões.</p>
+        <a href="produto.html" class="btn-sec">Ver mais</a>
+      </div>
+      <div class="card">
+        <img src="img/puma.jpg" alt="Puma">
+        <h3>Puma</h3>
+        <p>Velocidade e autenticidade no seu ritmo.</p>
+        <a href="produto.html" class="btn-sec">Ver mais</a>
+      </div>
+    </div>
+  </section>
 
-            <div class="produto-card">
-                <img src="img/puma.jpg" alt="Agasalho Puma">
-                <h3>Agasalho Puma Sport</h3>
-                <p>R$ 299,90</p>
-                <a href="produto.html" class="btn">Ver Detalhes</a>
-            </div>
-        </div>
-    </section>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 SportMaster - Todos os direitos reservados.</p>
+  </footer>
 
-    <!-- Sobre -->
-    <section id="sobre" class="sobre">
-        <h2>Sobre a SportX</h2>
-        <p>A SportX nasceu para reunir as melhores marcas esportivas do mundo em um só lugar. 
-        Nosso compromisso é oferecer produtos de qualidade, conforto e desempenho para atletas e entusiastas do esporte.</p>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato" class="contato">
-        <h2>Entre em Contato</h2>
-        <form>
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu Email" required>
-            <textarea placeholder="Sua Mensagem" required></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="footer">
-        <p>© 2025 SportX - Todos os direitos reservados.</p>
-        <div class="social">
-            <a href="#">Instagram</a> | 
-            <a href="#">Facebook</a> | 
-            <a href="#">X (Twitter)</a>
-        </div>
-    </footer>
 </body>
 </html>
