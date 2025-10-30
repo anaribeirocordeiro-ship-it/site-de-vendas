@@ -3,57 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendas de Roupas Cristãs - Fé e Estilo</title>
+    <title>Vendas de Roupas Cristãs - Roupas de Fé Cristã</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <input type="checkbox" id="dark-mode-toggle" style="display: none;">
     <header>
         <div class="logo">
-            <h1>✝️ Fé e Estilo</h1>
+            <h1>✝️ Roupas de Fé Cristã</h1>
             <p>Roupas que refletem sua fé</p>
         </div>
         <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#inspiracao">Inspiração</a></li>
+                <li class="dropdown">
+                    <a href="#produtos">Produtos ▼</a>
+                    <ul class="submenu">
+                        <li><a href="#camisetas">Camisetas</a></li>
+                        <li><a href="#moletons">Moletons</a></li>
+                        <li><a href="#acessorios">Acessórios</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <div class="breadcrumb">
+            <a href="#home">Home</a> > <span id="breadcrumb-current">Produtos</span>
+        </div>
+        <label for="dark-mode-toggle" class="dark-toggle">🌙 Modo Noturno</label>
     </header>
 
     <section id="home" class="hero">
-        <h2>Bem-vindo à Fé e Estilo ✝️</h2>
-        <p>Descubra roupas cristãs que combinam conforto, estilo e mensagens de fé. "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito" - João 3:16.</p>
+        <div class="hero-content">
+            <h2>Bem-vindo às Roupas de Fé Cristã ✝️</h2>
+            <p>Descubra roupas cristãs que combinam conforto, estilo e mensagens de fé. "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito" - João 3:16.</p>
+            <a href="#produtos" class="cta-button">Explorar Produtos</a>
+        </div>
+        <div class="parallax-bg"></div>
+        <div class="floating-crosses">
+            <svg class="cross" viewBox="0 0 100 100"><path d="M50 10 L60 40 L90 40 L65 60 L75 90 L50 70 L25 90 L35 60 L10 40 L40 40 Z" fill="#ffd700"/></svg>
+            <svg class="cross" viewBox="0 0 100 100"><path d="M50 10 L60 40 L90 40 L65 60 L75 90 L50 70 L25 90 L35 60 L10 40 L40 40 Z" fill="#ffd700"/></svg>
+        </div>
+    </section>
+
+    <section id="carrossel" class="carrossel">
+        <h2>Destaques da Semana</h2>
+        <div class="carrossel-container">
+            <div class="slide active">
+                <img src="11-77bc479708c74c894917474087104997-1024-1024.png" alt="Destaque 1">
+                <p>Camiseta com Cruz - R$ 49,90</p>
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/600x300?text=Destaque+2+F%C3%A9" alt="Destaque 2">
+                <p>Moletom Fé - R$ 89,90</p>
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/600x300?text=Destaque+3+Gra%C3%A7a" alt="Destaque 3">
+                <p>Jaqueta Graça - R$ 129,90</p>
+            </div>
+        </div>
     </section>
 
     <section id="produtos" class="produtos">
         <h2>Nossos Produtos</h2>
-        <div class="produto-grid">
-            <div class="produto">
-                <img src="https://via.placeholder.com/300x200?text=Camiseta+Cruz" alt="Camiseta com Cruz">
-                <h3>Camiseta com Cruz ✝️</h3>
-                <p>Camiseta branca com estampa de cruz. Tamanho M. R$ 49,90. "Tudo posso naquele que me fortalece" - Filipenses 4:13.</p>
-                <button>Comprar Agora</button>
+        <div class="produto-container">
+            <aside class="sidebar">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><button class="filter-btn" data-category="camisetas">Camisetas</button></li>
+                    <li><button class="filter-btn" data-category="moletons">Moletons</button></li>
+                    <li><button class="filter-btn" data-category="acessorios">Acessórios</button></li>
+                </ul>
+                <p>"Viva a fé com estilo!"</p>
+                <div class="decorative-cross">✝️</div>
+            </aside>
+            <div class="produto-grid">
+                <div class="produto camisetas">
+                    <img src="https://via.placeholder.com/300x200?text=Camiseta+Cruz" alt="Camiseta com Cruz">
+                    <h3>Camiseta com Cruz ✝️</h3>
+                    <p>Camiseta branca com estampa de cruz. Tamanhos: M, G, P. Cores: Branco, Azul. R$ 49,90. "Tudo posso naquele que me fortalece" - Filipenses 4:13.</p>
+                    <button>Comprar Agora</button>
+                </div>
+                <!-- (Produtos restantes mantidos similares) -->
             </div>
-            <div class="produto">
-                <img src="https://via.placeholder.com/300x200?text=Moletom+F%C3%A9" alt="Moletom Fé">
-                <h3>Moletom Fé</h3>
-                <p>Moletom confortável com versículo bíblico. Tamanho G. R$ 89,90. "A fé é a certeza daquilo que esperamos" - Hebreus 11:1.</p>
-                <button>Comprar Agora</button>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <div class="sobre-content">
+            <img src="https://via.placeholder.com/400x300?text=Hist%C3%B3ria+Crist%C3%A3" alt="História Cristã">
+            <div class="texto">
+                <p>Nossa missão é levar mensagens de fé através de roupas e acessórios. Inspirados em João 3:16, acreditamos que a moda pode ser uma ferramenta para compartilhar o amor de Deus. Fundada em 2020, Roupas de Fé Cristã começou como um pequeno projeto e hoje alcança milhares de pessoas.</p>
+                <p>"Ide por todo o mundo e pregai o evangelho" - Marcos 16:15.</p>
             </div>
-            <div class="produto">
-                <img src="https://via.placeholder.com/300x200?text=Bon%C3%A9+Esperan%C3%A7a" alt="Boné Esperança">
-                <h3>Boné Esperança</h3>
-                <p>Boné azul com mensagem de esperança. R$ 39,90. "Espera no Senhor; anima-te e fortalece o teu coração" - Salmos 27:14.</p>
-                <button>Comprar Agora</button>
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria">
+        <h2>Galeria de Produtos</h2>
+        <div class="galeria-grid">
+            <img src="https://via.placeholder.com/300x200?text=Produto+1" alt="Produto 1">
+            <img src="https://via.placeholder.com/300x200?text=Produto+2" alt="Produto 2">
+            <img src="https://via.placeholder.com/300x200?text=Produto+3" alt="Produto 3">
+            <img src="https://via.placeholder.com/300x200?text=Produto+4" alt="Produto 4">
+            <img src="https://via.placeholder.com/300x200?text=Produto+5" alt="Produto 5">
+            <img src="https://via.placeholder.com/300x200?text=Produto+6" alt="Produto 6">
+        </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos">
+        <h2>Depoimentos</h2>
+        <div class="depoimento-grid">
+            <div class="depoimento">
+                <p>"Essas roupas me ajudam a expressar minha fé todos os dias!" - Maria S.</p>
             </div>
-            <div class="produto">
-                <img src="https://via.placeholder.com/300x200?text=Jaqueta+Gra%C3%A7a" alt="Jaqueta Graça">
-                <h3>Jaqueta Graça</h3>
-                <p>Jaqueta leve com estampa de graça divina. Tamanho P. R$ 129,90. "Pela graça sois salvos, mediante a fé" - Efésios 2:8.</p>
-                <button>Comprar Agora</button>
+            <div class="depoimento">
+                <p>"Qualidade incrível e mensagens inspiradoras. Recomendo!" - João P.</p>
             </div>
+            <div class="depoimento">
+                <p>"Sinto-me mais próximo de Deus usando esses produtos." - Ana L.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline">
+        <h2>Timeline Bíblica</h2>
+        <div class="timeline-container">
+            <div class="event">
+                <h3>Criação</h3>
+                <p>Gênesis 1: Deus cria o mundo.</p>
+            </div>
+            <div class="event">
+                <h3>Nascimento de Jesus</h3>
+                <p>Mateus 1: O Salvador nasce.</p>
+            </div>
+            <div class="event">
+                <h3>Ressurreição</h3>
+                <p>João 20: Jesus ressuscita.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="mapa" class="mapa">
+        <h2>Locais Sagrados</h2>
+        <div class="map-container">
+            <img src="https://via.placeholder.com/800x400?text=Mapa+Locais+Sagrados" alt="Mapa">
+            <div class="overlay">
+                <p>Jerusalém, Nazaré, Belém...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <h2>Blog Cristão</h2>
+        <div class="blog-posts">
+            <article class="post">
+                <h3><a href="#post1">Como a Fé Transforma o Estilo</a></h3>
+                <p>Explore como roupas cristãs podem refletir sua espiritualidade...</p>
+                <small>Publicado em 15/10/2023</small>
+            </article>
+            <article class="post">
+                <h3><a href="#post2">Versículos Bíblicos para o Dia a Dia</a></h3>
+                <p>Descubra citações que inspiram e fortalecem...</p>
+                <small>Publicado em 10/10/2023</small>
+            </article>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+        <h2>Inscreva-se na Newsletter</h2>
+        <form action="#" method="post">
+            <input type="email" placeholder="Seu e-mail" required>
+            <input type="text" placeholder="Nome" required>
+            <button type="submit">Inscrever-se</button>
+        </form>
+        <p>Receba inspiração cristã e ofertas exclusivas!</p>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3>Como comprar?</h3>
+            <p>Clique em 'Comprar Agora' e siga as instruções. Aceitamos cartão e boleto.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Entregam em todo o Brasil?</h3>
+            <p>Sim, com frete grátis acima de R$ 100.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Qual é a missão de vocês?</h3>
+            <p>Compartilhar a fé através da moda, inspirados na Bíblia.</p>
         </div>
     </section>
 
@@ -67,8 +214,8 @@
     </section>
 
     <footer id="contato">
-        <p>&copy; 2023 Fé e Estilo. Todos os direitos reservados. "Ide por todo o mundo e pregai o evangelho a toda criatura." - Marcos 16:15</p>
-        <p>Contato: email@feeestilo.com | Telefone: (11) 9999-9999</p>
+        <p>&copy; 2023 Roupas de Fé Cristã. Todos os direitos reservados. "Ide por todo o mundo e pregai o evangelho a toda criatura." - Marcos 16:15</p>
+        <p>Contato: email@roupasdefecrista.com | Telefone: (11) 9999-9999</p>
     </footer>
 </body>
 </html>
